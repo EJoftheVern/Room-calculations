@@ -3,22 +3,55 @@
 
 #include "stdafx.h"
 #include <iostream>
+#include <string>
 using namespace std;
 
+//Class that holds the information about the room and can perform the calculations on it
+class roomInfo {	
+public:
+	float width;
+	float depth;
+	float height;
+	float area() {
+		return width*depth;
+	}
+	float paintRequired() {
+		return 1.1*(2 * (2 * width * height + 2 * depth * height - 1.509522)) / 10;
+	}
+	float volume() {
+		return width*depth*height;
+	}
+};
+
+//floatInput takes a string as an argument. This string is displayed as a message then the user is asked for input until they enter a number
+float floatInput(string userPrompt) {	
+	float result;
+	cout << userPrompt;
+	cin >> result;
+	while (cin.fail()) {
+		cout << "Please enter a number" << endl;
+		cin.clear();
+		cin.ignore(255, '\n');
+		cin >> result;
+	}
+	return result;
+};
+
+//Main block of code takes in each dimension using the lofatInput function and assigns these values to the object room1
 int main()
 {
-	float dimensions[3] = {}; //An array containing the width, depth and height of the room in this order
-	cout << "Enter the room width(metres): ";
-	cin >> dimensions[0];
-	cout << "Enter the room depth(metres): ";
-	cin >> dimensions[1];
-	cout << "Enter the room height(metres): ";
-	cin >> dimensions[2];
-	cout << "Floor area(metres^2): " << dimensions[0] * dimensions[1] << endl; //Output floor area
-	cout << "Estimated Paint Required(Litres): " << 1.1*(2 * (2 * dimensions[0] * dimensions[2] + 2 * dimensions[1] * dimensions[2] - 1.509522)) / 10 << endl; //10% Extra Paint For Mistakes and Touch Ups * (Number of Coats *(Surface area of walls-standard area of a single door)) / Average area per litre of an interior paint
-	cout << "Volume of room(metres^3): " << dimensions[0] * dimensions[1] * dimensions[2]; //Output room volume
+	roomInfo room1;		
+	room1.width = floatInput("Enter the room width(metres) : ");	
+	room1.depth = floatInput("Enter the room depth(metres): ");
+	room1.height = floatInput("Enter the room height(metres): ");	
+	cout << "The area(metres^2) is " << room1.area() << endl;
+	cout << "The amount of paint(litres) required to paint the room is:" << room1.paintRequired() << endl;
+	cout << "The volume(metres^3) of the room is " << room1.volume() << endl;	
 	cin.ignore(255, '\n');
 	cin.get();
 	return 0;
-}
+	
+};
+
+
 

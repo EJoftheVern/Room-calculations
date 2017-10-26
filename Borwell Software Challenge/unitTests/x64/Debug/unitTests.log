@@ -1,0 +1,8 @@
+﻿  stdafx.cpp
+  unittest1.cpp
+  BorwellSoftwareChallenge.cpp
+c:\users\elliot\documents\github\room-calculations\borwell software challenge\borwell software challenge\borwellsoftwarechallenge.cpp(19): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+     Creating library C:\Users\Elliot\Documents\GitHub\Room-Calculations\Borwell Software Challenge\x64\Debug\unitTests.lib and object C:\Users\Elliot\Documents\GitHub\Room-Calculations\Borwell Software Challenge\x64\Debug\unitTests.exp
+  unitTests.vcxproj -> C:\Users\Elliot\Documents\GitHub\Room-Calculations\Borwell Software Challenge\x64\Debug\unitTests.dll
+  unitTests.vcxproj -> C:\Users\Elliot\Documents\GitHub\Room-Calculations\Borwell Software Challenge\x64\Debug\unitTests.pdb (Partial PDB)
