@@ -4,24 +4,9 @@
 #include "stdafx.h"
 #include <iostream>
 #include <string>
+#include "borwellSoftwareChallengeHeader.h"
 using namespace std;
 
-//Class that holds the information about the room and can perform the calculations on it
-class roomInfo {	
-public:
-	float width;
-	float depth;
-	float height;
-	float area() {
-		return width*depth;
-	}
-	float paintRequired() {
-		return 1.1*(2 * (2 * width * height + 2 * depth * height - 1.509522)) / 10;
-	}
-	float volume() {
-		return width*depth*height;
-	}
-};
 
 //floatInput takes a string as an argument. This string is displayed as a message then the user is asked for input until they enter a number
 float floatInput(string userPrompt) {	
