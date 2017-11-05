@@ -1,5 +1,4 @@
 # Room Calculations
-This program can be run in visual studio 2017 or the contents of
-BorwellSoftwareChallenge.cpp can be run in any c++ program, note 
-that line 4: #include "stdafx.h" may not be required outside of
-visual studio.
+The source code in java for the Borwell Software Challenge 
+it needs to be compiled but can then be run by any machine with
+the java runtime environment installed
